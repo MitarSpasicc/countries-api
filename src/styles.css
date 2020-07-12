@@ -1,0 +1,387 @@
+html {
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  /* --background-primary-color: #fff;
+  --background-secondary-color: #202d36;
+  --background-primary-country-color: #2b3743;
+  --background-secondary-country-color: #2b3743;
+  --primary-color: #363636;
+  --secondary-color: #fff; */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.form-elements,
+.main {
+  padding: 0 8vw;
+}
+
+/* HEADER ========================*/
+
+.header {
+  display: flex;
+  padding: 1em 8vw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.theme {
+  position: relative;
+  cursor: pointer;
+}
+
+.fa-moon-o {
+  position: absolute;
+  top: 0;
+  left: -1.2em;
+}
+
+/* FORM ELEMENTS ================= */
+
+.form-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  position: relative;
+  margin: 2.5em 0;
+}
+
+.search-input {
+  position: relative;
+  width: 25em;
+  padding: 0.9em;
+  text-indent: 40px;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  box-shadow: 1px 2px 2px rgb(216, 216, 216);
+}
+
+.search-input::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: url("https://p7.hiclipart.com/preview/675/9/247/computer-icons-world-wide-web-iconfinder-search-simple-png.jpg")
+    no-repeat;
+}
+
+@keyframes increase {
+  0% {
+    width: 15em;
+  }
+  100% {
+    width: 25em;
+  }
+}
+
+.fa-search {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  margin: 0 2em;
+  transform: translate(0%, -50%);
+  color: rgb(143, 143, 143);
+}
+
+.select-region {
+  padding: 0.8em;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 3px rgb(216, 216, 216);
+  cursor: pointer;
+}
+
+/* MAIN ========================== */
+
+.main {
+  background-color: #fafafa;
+  height: 100%;
+}
+
+/* COUNTRIES ===================== */
+
+.countries {
+  display: grid;
+  grid-gap: 5vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+}
+
+.country {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgb(206, 206, 206);
+}
+
+.country-pic img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+
+.country-pic {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+}
+
+.about-country {
+  padding: 1em 0 1em 2em;
+  background-color: #fff;
+  height: 50%;
+}
+
+.country-name {
+  padding: 1em 0;
+}
+
+.about-country span {
+  line-height: 2em;
+}
+
+.about-country p {
+  color: #363636;
+  font-weight: 300;
+}
+.about-country span {
+  font-weight: 600;
+  color: #000;
+}
+
+.link {
+  color: #363636;
+  text-decoration: none;
+}
+
+/* Details Page ==================== */
+
+.details {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonized {
+  position: relative;
+  margin: 2em 0;
+}
+
+.back-btn {
+  cursor: pointer;
+  padding: 1em 4em;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px rgb(172, 170, 170);
+  outline: none;
+  border: 1px solid #dfdfdf;
+  line-height: 1;
+  text-align: center;
+}
+
+.fa-chevron-left {
+  position: absolute;
+  margin-left: -1.8em;
+  top: 50%;
+  transform: translate(0%, -50%);
+  color: rgb(185, 184, 184);
+}
+
+.dtl-country-pic {
+  width: 50%;
+  height: 100%;
+}
+
+.country-info-container {
+  display: flex;
+  padding: 1em 0;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.country-info {
+  width: 50%;
+  padding-left: 3em;
+}
+
+.dtl-country-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+
+.country-info-list {
+  list-style-type: none;
+  margin-right: 1em;
+}
+
+.country-info-list li {
+  color: #000;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+
+.country-info-list li span {
+  font-weight: 200;
+  color: #000;
+  padding-left: 0.2em;
+}
+
+.border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.border-countries span {
+  margin-right: 0.2em;
+}
+
+.border-btns {
+  padding: 0.1em 1em;
+  font-weight: 200;
+  cursor: pointer;
+  margin: 0.3em 0.3em 0.2em 0;
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #f1f1f1;
+}
+
+/* Loader ======================== */
+/* .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  animation: spin 0.5s linear infinite;
+  color: rgb(131, 136, 127);
+} */
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .countries {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5vw 8vw;
+  }
+
+  .country-info-container {
+    flex-direction: column;
+  }
+  .country-info {
+    padding-left: 5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .details {
+    flex-direction: column;
+  }
+
+  .country-info h1 {
+    text-align: center;
+  }
+
+  .country-info {
+    width: 100%;
+    align-self: flex-start;
+    padding-left: 0;
+  }
+
+  .dtl-country-pic {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 900px) {
+  .countries {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vw 15vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .countries {
+    /* grid-template-columns: repeat(1, 1fr); */
+    display: block;
+    margin: 0 auto;
+  }
+
+  .main {
+    padding: 0 15vw;
+  }
+
+  .form-elements {
+    padding: 0 15vw;
+  }
+
+  .country {
+    margin-bottom: 2em;
+  }
+
+  .dtl-country-pic {
+    margin-bottom: 0;
+  }
+
+  .form-elements {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2em 0;
+  }
+
+  .search-input {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .fa-search {
+    margin: -1.4em 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .buttonized {
+    margin: 1.5em 0;
+  }
+  .back-btn {
+    padding: 1em 2.5em;
+    text-align: right;
+  }
+}
+
+@media (max-width: 380px) {
+  .where h2 {
+    font-size: 16px;
+  }
+}
